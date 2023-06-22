@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <img src="setting-2.svg" height="30px" id="settings-button">
+    <div id="settings-container">
+      <div id="theme-mode">CHANGE THEME</div>
+    </div>
+   <!--<img src="light_mode.svg" height="30px" id="light_switch">
+    <button id="butt">CLICK</button>-->
+<!--
+    <p id="theme">Dark</p>
+
+    <div id="test1"></div>
+    <div id="test2"></div>
+    <div id="test3"></div> 
+    -->
+
+    <div id="container">
+      
+      <br><br>
+      <p>Input File</p>
+
+      <div id="select-file-input">
+        <div id="value-input">/path/to/file.txt</div>
+        <div id="three-dots">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+      </div>
+
+      <p>Output File</p>
+
+      <div id="select-file-output">
+        <div id="value-output">/path/to/file.txt</div>
+        <div id="three-dots">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+      </div>
+      
+      <p>Output Type</p>
+      <div class="output type" id="output-type">
+        <div class="value">Only Translation</div>
+        <img class="arrow" src="./Arrow-down.svg"/>
+      </div>
+
+      <div id="output-type-select">
+        <p class="option" value="word-with-trans">Original Word With Translation</p>
+        <p class="option" value="word-with-example">Original Word With Example Sentence</p>
+        <p class="option" value="only-trans">Only Translation</p>
+        <p class="option" value="only-example">Only Example</p>
+        <p class="option" value="example-with-word-trans">Example Sentence With Word Translation</p>
+      </div>
+
+      <p>Output Format</p>
+      <div class="output format" id="output-format">
+        <div class="value">Tab Separated Values (tsv)</div>
+        <img class="arrow" src="./Arrow-down.svg"/>
+      </div>
+
+      <div id="output-format-select">
+        <p class="option" value="tsv" delimeter="\t">Tab Separated Values (tsv)</p>
+        <p class="option" value="csv" delimeter=";">Comma Separated Values (csv)</p>
+      </div>
+
+
+      <p>Input Language</p>
+      <div id="input-language">
+        <div class="value">Spanish</div>
+        <img class="arrow" src="./Arrow-down.svg"/>
+      </div>
+
+      <div id="input-language-select">
+        <p class="option" value="arabic">Arabic</p>
+        <p class="option" value="german">German</p>
+        <p class="option" value="english">English</p>
+        <p class="option" value="spanish">Spanish</p>
+        <p class="option" value="french">French</p>
+        <p class="option" value="hebrew">Hebrew</p>
+        <p class="option" value="italian">Italian</p>
+        <p class="option" value="japanese">Japanese</p>
+        <p class="option" value="korean">Korean</p>
+        <p class="option" value="dutch">Dutch</p>
+        <p class="option" value="polish">Polish</p>
+        <p class="option" value="portuguese">Portuguese</p>
+        <p class="option" value="romanian">Romanian</p>
+        <p class="option" value="russian">Russian</p>
+        <p class="option" value="swedish">Swedish</p>
+        <p class="option" value="turkish">Turkish</p>
+        <p class="option" value="ukrainian">Ukrainian</p>
+        <p class="option" value="chinese">Chinese</p>
+      </div>
+
+      <p>Output Language</p>
+      <div id="output-language">
+        <div class="value">English</div>
+        <img class="arrow" src="./Arrow-down.svg"/>
+      </div>
+
+      <div id="output-language-select">
+        <p class="option" value="arabic">Arabic</p>
+        <p class="option" value="german">German</p>
+        <p class="option" value="english">English</p>
+        <p class="option" value="spanish">Spanish</p>
+        <p class="option" value="french">French</p>
+        <p class="option" value="hebrew">Hebrew</p>
+        <p class="option" value="italian">Italian</p>
+        <p class="option" value="japanese">Japanese</p>
+        <p class="option" value="korean">Korean</p>
+        <p class="option" value="dutch">Dutch</p>
+        <p class="option" value="polish">Polish</p>
+        <p class="option" value="portuguese">Portuguese</p>
+        <p class="option" value="romanian">Romanian</p>
+        <p class="option" value="russian">Russian</p>
+        <p class="option" value="swedish">Swedish</p>
+        <p class="option" value="turkish">Turkish</p>
+        <p class="option" value="ukrainian">Ukrainian</p>
+        <p class="option" value="chinese">Chinese</p>
+      </div>
+
+      <p>Original Word Highlight Color</p>
+      
+      <div id="colorpicker">
+        <input type="color" id="colorpickerInput">
+        <input type="checkbox" id="noHighlight">
+      </div>
+
+      <p></p>
+
+      <div id="generate-button">GENERATE</div>
+
+    </div>
+
+    <script src="./renderer.js"></script>
+  </body>
+</html>
